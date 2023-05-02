@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="google_sign_in_server_client_id" translatable="false">736980942705-vqa84blb0sj2dchssj7f30tsu5gpr745.apps.googleusercontent.com</string>
+    <string name="facebook_app_id" translatable="false">464833381654922</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb464833381654922</string>
+    <string name="facebook_client_token" translatable="false">7bb0903012f8b42a8495f960edef8dda</string>
+
+</resources>
