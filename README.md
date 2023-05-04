@@ -103,7 +103,7 @@ private fun setupDelegateCallBacks() {
         onGoogleSignInSuccess = {
 //            Логика получения токена и запрос на авторизацию
         }
-        showSignInErrorMessage = {
+        onGoogleSignInErrorMessage = {
 //            Показываем ошибку
         }
         onFacebookSignInErrorMessage = {
@@ -115,7 +115,7 @@ private fun setupDelegateCallBacks() {
 Перезаписываем метод ```onActivityResult()```:
 ```kotlin
 override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        onDelegateActivityResult(requestCode, resultCode, data) // GoogleSignIn
+        onGoogleSignInDelegateActivityResult(requestCode, resultCode, data) // GoogleSignIn
         onFacebookDelegateActivityResult(requestCode, resultCode, data) // FacebookLogin
         super.onActivityResult(requestCode, resultCode, data)
     }
