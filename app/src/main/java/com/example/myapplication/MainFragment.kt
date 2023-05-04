@@ -49,23 +49,23 @@ class MainFragment : Fragment(),
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        onDelegateActivityResult(requestCode, resultCode, data)
+        onGoogleSignInDelegateActivityResult(requestCode, resultCode, data)
         onFacebookDelegateActivityResult(requestCode, resultCode, data)
         super.onActivityResult(requestCode, resultCode, data)
     }
 
     private fun setupDelegateCallBacks() {
         onFacebookSignInSuccess = {
-//            viewModel.onSocialNetworkSignInSuccess(token = it, isGoogleAuth = false)
+//            Логика получения токена и запрос на авторизацию
         }
         onGoogleSignInSuccess = {
-//            viewModel.onSocialNetworkSignInSuccess(token = it, isGoogleAuth = true)
+//            Логика получения токена и запрос на авторизацию
         }
-        showSignInErrorMessage = {
-//            errorMessage(it)
+        onGoogleSignInErrorMessage = {
+//            Показываем ошибку
         }
         onFacebookSignInErrorMessage = {
-//            errorMessage(it)
+//            Показываем ошибку
         }
     }
 }
