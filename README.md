@@ -12,9 +12,11 @@
 Применение
 ---
 Добавьте следующую библиотеку в раздел зависимостей файла ```build.gradle``` уровня приложения вашего проекта:
+---
+Ссылка на актуальную версию библиотеки: [version](https://github.com/azimutlabsmobile/AndroidAlabsCoreSocialAuth/releases)
 ```groovy
 dependencies {
-	        implementation 'com.github.azimutlabsmobile:AndroidAlabsCoreSocialAuth:1.0.0'
+	        implementation 'com.github.azimutlabsmobile:AndroidAlabsCoreSocialAuth:$version'
 	}
 ```
 
