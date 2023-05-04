@@ -21,7 +21,7 @@ class GoogleSignInApiDelegate(
     }
 
     override var onGoogleSignInSuccess: ((String) -> Unit)? = null
-    override var showSignInErrorMessage: ((String) -> Unit)? = null
+    override var onGoogleSignInErrorMessage: ((String) -> Unit)? = null
 
     private lateinit var googleSignInClient: GoogleSignInClient
 
@@ -43,7 +43,7 @@ class GoogleSignInApiDelegate(
         fragment.startActivityForResult(signInIntent, RC_SIGN_IN)
     }
 
-    override fun onDelegateActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    override fun onGoogleSignInDelegateActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == RC_SIGN_IN) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             handleSignInResult(task)
@@ -59,7 +59,7 @@ class GoogleSignInApiDelegate(
         } catch (e: ApiException) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
-            showSignInErrorMessage?.invoke(e.message.toString())
+            onGoogleSignInErrorMessage?.invoke(e.message.toString())
         }
     }
 }

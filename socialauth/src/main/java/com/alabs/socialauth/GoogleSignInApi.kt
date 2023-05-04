@@ -18,7 +18,7 @@ interface GoogleSignInApi {
     /**
      * Отлавливаем результат при onDelegateActivityResult
      */
-    fun onDelegateActivityResult(requestCode: Int, resultCode: Int, data: Intent?)
+    fun onGoogleSignInDelegateActivityResult(requestCode: Int, resultCode: Int, data: Intent?)
 
     /**
      * Получаем событие если успешно распознан qrCode
@@ -28,5 +28,5 @@ interface GoogleSignInApi {
     /**
      * Получаем событие если успешно распознан qrCode
      */
-    var showSignInErrorMessage: ((String) -> Unit)?
+    var onGoogleSignInErrorMessage: ((String) -> Unit)?
 }
