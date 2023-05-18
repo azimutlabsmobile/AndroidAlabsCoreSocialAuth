@@ -1,4 +1,4 @@
-<h1 align="center">Привет, с Вами Android команда, компании <a href="https://daniilshat.ru/" target="_blank">alabs.team</a>
+<h1 align="center">Привет, с Вами Android команда, компании <a href="https://alabs.team/" target="_blank">alabs.team</a>
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 
 Эта библиотека помогает авторизоваться с помощью социальных сетей
