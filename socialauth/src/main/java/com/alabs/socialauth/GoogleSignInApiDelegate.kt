@@ -20,7 +20,7 @@ class GoogleSignInApiDelegate(
         const val RC_SIGN_IN = 1002
     }
 
-    override var onGoogleSignInSuccess: ((String) -> Unit)? = null
+    override var onGoogleSignInSuccess: ((GoogleSignInAccount) -> Unit)? = null
     override var onGoogleSignInErrorMessage: ((String) -> Unit)? = null
 
     private lateinit var googleSignInClient: GoogleSignInClient
@@ -53,7 +53,7 @@ class GoogleSignInApiDelegate(
     private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
         try {
             val account = completedTask.getResult(ApiException::class.java)
-            onGoogleSignInSuccess?.invoke(account?.idToken.toString())
+            onGoogleSignInSuccess?.invoke(account)
             // Signed in successfully, show authenticated UI.
             // You can use the account to access Google services on behalf of the user.
         } catch (e: ApiException) {

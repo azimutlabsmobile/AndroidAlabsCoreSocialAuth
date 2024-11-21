@@ -2,6 +2,7 @@ package com.alabs.socialauth
 
 import android.content.Intent
 import androidx.fragment.app.Fragment
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 
 interface GoogleSignInApi {
 
@@ -23,7 +24,7 @@ interface GoogleSignInApi {
     /**
      * Получаем событие если успешно распознан qrCode
      */
-    var onGoogleSignInSuccess: ((String) -> Unit)?
+    var onGoogleSignInSuccess: ((GoogleSignInAccount) -> Unit)?
 
     /**
      * Получаем событие если успешно распознан qrCode
